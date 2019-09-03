@@ -1,0 +1,58 @@
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> Dict={'name':vaibhava,'section':'B','branch':'computer science','age':21}
+Traceback (most recent call last):
+  File "<pyshell#0>", line 1, in <module>
+    Dict={'name':vaibhava,'section':'B','branch':'computer science','age':21}
+NameError: name 'vaibhava' is not defined
+>>>  Dict={'name':'vaibhava','section':'B','branch':'computer science','age':21}
+ 
+SyntaxError: unexpected indent
+>>> Dict={'name':'vaibhava','section':'B','branch':'computer science','age':21}
+>>> Dict
+{'name': 'vaibhava', 'section': 'B', 'branch': 'computer science', 'age': 21}
+>>> Dict.update('gender':'female')
+SyntaxError: invalid syntax
+>>> Dict.update('gender:'female:')
+	    
+SyntaxError: invalid syntax
+>>> Dict.update({'gender':'female'})
+>>> Dict
+{'name': 'vaibhava', 'section': 'B', 'branch': 'computer science', 'age': 21, 'gender': 'female'}
+>>> Dict.get('gender')
+'female'
+>>> Dict
+{'name': 'vaibhava', 'section': 'B', 'branch': 'computer science', 'age': 21, 'gender': 'female'}
+>>> Dict.copy()
+{'name': 'vaibhava', 'section': 'B', 'branch': 'computer science', 'age': 21, 'gender': 'female'}
+>>> Dict.popitem()
+('gender', 'female')
+>>> Dict.pop()
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    Dict.pop()
+TypeError: pop expected at least 1 arguments, got 0
+>>>  Dict.pop('bramch')
+ 
+SyntaxError: unexpected indent
+>>>  Dict.pop(branch)
+ 
+SyntaxError: unexpected indent
+>>>  Dict.pop('branch')
+ 
+SyntaxError: unexpected indent
+>>> Dict.pop('branch')
+'computer science'
+>>> Dict.values()
+dict_values(['vaibhava', 'B', 21])
+>>> Dict.items()
+dict_items([('name', 'vaibhava'), ('section', 'B'), ('age', 21)])
+>>> Dict.setdefault('name','betty')
+'vaibhava'
+>>> Dict.setdefault('gender','female')
+'female'
+>>> Dict.clear()
+>>> Dict
+{}
+>>> 
